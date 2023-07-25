@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
+import { Form } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -26,15 +28,14 @@ function App() {
   // }, [])
   return (
     <>
-      <select o>
+      <Form.Select aria-label='Default select example'>
         {subjects.map((sub)=>{
-          
           return(<option key={sub}onClick={(e)=>{
             console.log(e.target.value)
             getData(e.target.value)
           }}>{sub}</option>)
         })}
-      </select>
+      </Form.Select>
     </>
   )
 }
